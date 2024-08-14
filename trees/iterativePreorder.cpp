@@ -16,8 +16,6 @@ void iterativePreorder(Node* root){
 	stack<Node*> s;
 	s.push(root);
 	while(!s.empty()){
-		int stackSize=s.size();
-		for(int i=0;i<stackSize;i++){
 			Node* node = s.top();
 			s.pop();
 			cout<<node->data<<" ";
@@ -27,7 +25,6 @@ void iterativePreorder(Node* root){
 			if(node->left!=NULL){
 				s.push(node->left);
 			}
-		}
 	}
 }
 
